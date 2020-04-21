@@ -31,7 +31,7 @@ import React from "react";
     
       function getLink() {
         linkRef.get().then((doc) => {
-          console.log(doc)
+      setLink({ ...doc.data(), id: doc.displayName });
         })
 		.catch(err => console.log(err));
       }
