@@ -18,5 +18,3 @@ if (!values.name){
 		errors.password = "Your pasword must be at least 6 characters"
 	}
 }
-
-

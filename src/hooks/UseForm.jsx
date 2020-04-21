@@ -1,9 +1,9 @@
-import React from "react";
-import { toast } from "../helpers/toast";
+import React, { useState } from 'react';import { toast } from "../helpers/toast";
 
 function useForm(initialState, validate, action) {
   const [values, setValues] = React.useState(initialState);
-  const [errors, setErrors] = React.useState({});
+  const [errors, setErrors] = useState({});
+	console.log(errors)
   const [isSubmitting, setSubmitting] = React.useState(false);
 
   React.useEffect(() => {
@@ -29,9 +29,11 @@ function useForm(initialState, validate, action) {
   }
 
   function handleSubmit() {
-    const validationErrors = validate(values);
-    setErrors(validationErrors);
-    setSubmitting(true);
+  	const validationErrors = validate(values);
+	  console.log(typeof validate);
+	  console.log(validationErrors)
+		setErrors(validationErrors);
+		setSubmitting(true);
   }
 
   return {
