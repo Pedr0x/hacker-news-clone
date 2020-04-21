@@ -11,7 +11,7 @@ class Firebase {
 		app.initializeApp(firebaseConfig);
 		this.app = app;
 		this.auth = app.auth();
-		this.db = app.firestore
+		this.db = app.firestore();
 	}
 	
 	async register(name,email,password){

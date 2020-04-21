@@ -3,7 +3,6 @@ import React, { useState } from 'react';import { toast } from "../helpers/toast"
 function useForm(initialState, validate, action) {
   const [values, setValues] = React.useState(initialState);
   const [errors, setErrors] = useState({});
-	console.log(errors)
   const [isSubmitting, setSubmitting] = React.useState(false);
 
   React.useEffect(() => {

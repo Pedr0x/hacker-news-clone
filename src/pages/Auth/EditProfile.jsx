@@ -14,7 +14,7 @@ import {
   IonItem,
   IonLabel,
   IonInput,
-  IonLoading,
+  IonLoading
 } from "@ionic/react";
 import NavHeader from "../../components/NavHeader";
 
