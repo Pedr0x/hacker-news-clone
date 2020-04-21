@@ -17,7 +17,6 @@ import React from "react";
       	IonLoading
       } from "@ionic/react";
 
-
     const INITIAL_STATE = {
       name: "",
       email: "",
