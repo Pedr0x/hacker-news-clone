@@ -19,7 +19,7 @@ class Firebase {
 			.createUserWithEmailAndPassword(email,password)
 		
 		return newUser.user.updateProfile({
-			displaName:name
+			displayName:name
 		})
 	}
 	login(email,password){

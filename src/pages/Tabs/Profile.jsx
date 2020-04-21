@@ -34,6 +34,9 @@ const Profile = (props) => {
       toast(err.message);
     }
   }
+	React.useEffect(() => {
+    console.log(user)
+  });
 
   return (
     <IonPage>

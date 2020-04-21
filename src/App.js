@@ -13,8 +13,15 @@ import SignUp from './pages/Auth/SignUp';
 import Login from './pages/Auth/Login';
 import Forgot from './pages/Auth/Forgot';
 
-
-import { newspaperOutline,personOutline, searchOutline, flameOutline } from 'ionicons/icons';
+import {
+	newspaperOutline,
+	personOutline,
+	searchOutline,
+	flameOutline,
+	personCircleOutline,
+	createOutline,
+	trendingUpOutline
+} from 'ionicons/icons';
 
 /* Core CSS required for Ionic components to work properly */
 import '@ionic/react/css/core.css';
@@ -36,7 +43,7 @@ import '@ionic/react/css/display.css';
 import './theme/variables.css';
 
 import useAuth from "./hooks/useAuth";
-
+import Link from "./pages/Link";
 import UserContext from "./context/UserContext"
 import "./app.css"
 
@@ -48,37 +55,47 @@ const App = () => {
 			<UserContext.Provider value={{ user, setUser }}>
 			<IonTabs> 
 			  <IonRouterOutlet>
+		           <Route path="/news" component={News} />
 				<Route path="/trending" component={Trending}/>
 				<Route path="/submit" component={Submit}/>
 				<Route path="/search" component={Search}/>
 				<Route path="/profile" component={Profile}/>
-						<Route path="/edit-profile" component={EditProfile}/>
+				<Route path="/edit-profile" component={EditProfile}/>
 				<Route path="/register" component={SignUp}/>
-
+              <Route path="/link/:linkId" component={Link} />
 				<Route path="/login" component={Login}/>
 				<Route path="/forgot" component={Forgot}/>
 				<Route path="/" component={News}/>
 
 					</IonRouterOutlet>
+		
 				<IonTabBar slot="bottom"> 
-					<IonTabButton tab="submit" href="/submit"> 
+					<IonTabButton tab="submit" href="/"> 
 						<IonIcon icon={newspaperOutline}/>
-						
-						<IonLabel>Newws </IonLabel>
+						<IonLabel>Swen</IonLabel>
+					</IonTabButton>
+		
+					<IonTabButton tab="submit" href="/submit"> 
+						<IonIcon icon={createOutline}/>
+						<IonLabel>Submit </IonLabel>
 					</IonTabButton>	
-						<IonTabButton tab="profile" href="/profile"> 
+		
+					<IonTabButton tab="profile" href="/profile"> 
 						<IonIcon icon={personOutline}/>
 						<IonLabel>profile </IonLabel>
 					</IonTabButton>	
-						<IonTabButton tab="search" href="/search"> 
+
+					<IonTabButton tab="search" href="/search"> 
 						<IonIcon icon={searchOutline}/>
 						<IonLabel>Newws </IonLabel>
 					</IonTabButton>	
-						<IonTabButton tab="trending" href="/trending"> 
+
+					<IonTabButton tab="trending" href="/trending"> 
 						<IonIcon icon={flameOutline}/>
 						<IonLabel>Newws </IonLabel>
 					</IonTabButton>	
-			
+
+		
 				</IonTabBar>
 
 					</IonTabs>

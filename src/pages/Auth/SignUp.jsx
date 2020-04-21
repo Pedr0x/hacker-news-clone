@@ -43,7 +43,9 @@ import React from "react";
           toast(err.message);
         }
         setBusy(false);
+		 console.log(name)
       }
+		
     
       return (
         <IonPage>
