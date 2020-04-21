@@ -1,19 +1,19 @@
-import React from 'react';
-import { IonPage, IonContent} from '@ionic/react';
-import SmallHeader from "./../../components/SmallHeader"
-import BigHeader from "./../../components/BigHeader"
-
-
-const News = () => {
-	return (		
-	<IonPage>
-		<SmallHeader />
-		<IonContent fullScreen>
-			<BigHeader title="Swen"/>
-		</IonContent>
-	</IonPage>
-	
-	)
-}
-
-export default News
+import React from "react";
+    import { IonContent, IonPage } from "@ionic/react";
+    import LinkList from "../../components/Links/LinkList";
+    import SmallHeader from "../../components/SmallHeader";
+    import BigHeader from "../../components/BigHeader";
+    
+    const News = (props) => {
+      return (
+        <IonPage>
+          <SmallHeader title="Swen" />
+          <IonContent>
+            <BigHeader title="Swen" />
+            <LinkList location={props.location} />
+          </IonContent>
+        </IonPage>
+      );
+    };
+    
+    export default News;
