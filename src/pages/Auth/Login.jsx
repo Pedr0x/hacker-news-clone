@@ -28,7 +28,6 @@ const Login = (props) => {
   );
 	const [busy, setBusy] = React.useState(false)
 	
-	
 	async function authenticateUser() {
 		setBusy(true);
 		const {email, password} = values;
@@ -45,15 +44,10 @@ const Login = (props) => {
 	
 	return(
 	<IonPage>
-		
-		<NavHeader title="Sign up"/>
+		<NavHeader title="Login"/>
 		      <IonLoading message={"Please wait..."} isOpen={busy} />
 
 		<IonContent>
-			<IonItem lines="full">
-				<IonLabel position="floating">Username</IonLabel>
-			<IonInput onIonChange={handleChange} name="name" type="text" required></IonInput>
-			</IonItem>
 			
 				<IonItem lines="full">
 				<IonLabel position="floating">Email</IonLabel>
